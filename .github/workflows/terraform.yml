@@ -99,4 +99,6 @@ jobs:
 
       - name: Terraform Apply
         working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform apply -auto-approve -input=false
+        run: |
+          sleep 30
+          terraform apply -auto-approve -input=false
